@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D74A474A34A506781D9A717 /* Pods_WhiteLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F9B60C5AE460ECC7BECAD /* Pods_WhiteLabel.framework */; };
 		C2543D641D855A0A005A26E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2543D631D855A0A005A26E7 /* main.m */; };
 		C2543D671D855A0A005A26E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2543D661D855A0A005A26E7 /* AppDelegate.m */; };
 		C2543D6A1D855A0A005A26E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2543D691D855A0A005A26E7 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64EDAA63308EEC8824AC67DF /* Pods-WhiteLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabel.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteLabel/Pods-WhiteLabel.release.xcconfig"; sourceTree = "<group>"; };
+		A064A14D5E134A16689277F4 /* Pods-WhiteLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteLabel/Pods-WhiteLabel.debug.xcconfig"; sourceTree = "<group>"; };
+		C10F9B60C5AE460ECC7BECAD /* Pods_WhiteLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2543D5F1D855A0A005A26E7 /* WhiteLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2543D631D855A0A005A26E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2543D651D855A0A005A26E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D74A474A34A506781D9A717 /* Pods_WhiteLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AB5F89BF27FE77F94E163E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A064A14D5E134A16689277F4 /* Pods-WhiteLabel.debug.xcconfig */,
+				64EDAA63308EEC8824AC67DF /* Pods-WhiteLabel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		704F83797B10A0F2A956962C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C10F9B60C5AE460ECC7BECAD /* Pods_WhiteLabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2543D561D855A0A005A26E7 = {
 			isa = PBXGroup;
 			children = (
 				C2543D611D855A0A005A26E7 /* WhiteLabel */,
 				C2543D601D855A0A005A26E7 /* Products */,
+				4AB5F89BF27FE77F94E163E9 /* Pods */,
+				704F83797B10A0F2A956962C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2543D761D855A0A005A26E7 /* Build configuration list for PBXNativeTarget "WhiteLabel" */;
 			buildPhases = (
+				0189787BC3AAEB73715312FA /* [CP] Check Pods Manifest.lock */,
 				C2543D5B1D855A0A005A26E7 /* Sources */,
 				C2543D5C1D855A0A005A26E7 /* Frameworks */,
 				C2543D5D1D855A0A005A26E7 /* Resources */,
+				D8B56538340F30C5DB4761D3 /* [CP] Embed Pods Frameworks */,
+				69431ABC04B39A0F153F0AF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0189787BC3AAEB73715312FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69431ABC04B39A0F153F0AF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteLabel/Pods-WhiteLabel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8B56538340F30C5DB4761D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteLabel/Pods-WhiteLabel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2543D5B1D855A0A005A26E7 /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		C2543D771D855A0A005A26E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A064A14D5E134A16689277F4 /* Pods-WhiteLabel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhiteLabel/Info.plist;
@@ -274,6 +350,7 @@
 		};
 		C2543D781D855A0A005A26E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64EDAA63308EEC8824AC67DF /* Pods-WhiteLabel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhiteLabel/Info.plist;
@@ -302,6 +379,7 @@
 				C2543D781D855A0A005A26E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

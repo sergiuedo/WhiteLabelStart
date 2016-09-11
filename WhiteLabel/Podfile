@@ -1,0 +1,7 @@
+target 'WhiteLabel' do
+use_frameworks!
+pod 'ECSlidingViewController', '~> 2.0.3'
+end
+
+
+
